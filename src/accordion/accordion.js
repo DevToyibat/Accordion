@@ -6,41 +6,40 @@ const Accordion = () => {
     {
       id: 1,
       question: "Do i have to allow the use of cookies",
-      answer: "Yes, cookies help us to save your data for the next time you visit our page.",
+      answer:
+        "Yes, cookies help save your data for the next time you visit our page.",
     },
     {
       id: 2,
       question: "How do i change my page password",
-      answer: "You will need to navigate to your profile and then click settings, change password",
+      answer: "Navigate to your profile, click settings and change password",
     },
     {
       id: 3,
       question: "What is Bank Id",
-      answer: "Bank Ids are verification bankers used when trying to resolve bank issues",
+      answer: " It is a number bankers use when trying to resolve bank issues",
     },
     {
-        id: 3,
-        question: "Whose birth number can i use",
-        answer: "Whatever birth numnber you have",
-      },
-      {
-        id: 3,
-        question: "When do i recieve a password ordered by the letter",
-        answer: "when you request for a pssword, ts is been authenticated immediately and sent to you.",
-      },
+      id: 3,
+      question: "Whose birth number can i use",
+      answer: "Whatever birth numnber you have",
+    },
+    {
+      id: 3,
+      question: "When do i receive a password ordered by the letter",
+      answer:
+        "when you request for a password, it is authenticated immediately and sent to you.",
+    },
   ]);
   return (
     <div style={Container}>
       <div style={Wrapper}>
         <h3 style={h3Text}>Questions and Answers About Login</h3>
         <div>
-        {question.map((q) => {
-          return (
-            <AccordionList key={q.id} question={q} />
-          );
-        })}
+          {question.map((q) => {
+            return <AccordionList key={q.id} question={q} />;
+          })}
         </div>
-        
       </div>
     </div>
   );
@@ -59,12 +58,12 @@ const Wrapper = {
   background: "white",
   padding: "10px",
   borderRadius: "5px",
-  display:'flex',
-  flexWrap:'wrap',
-  margin:'0 2em'
+  display: "flex",
+  flexWrap: "wrap",
+  margin: "0 2em",
 };
 const h3Text = {
-    width:'250px',
-    padding:'0px 4px'
-}
+  width: "250px",
+  padding: "0px 4px",
+};
 export default Accordion;
